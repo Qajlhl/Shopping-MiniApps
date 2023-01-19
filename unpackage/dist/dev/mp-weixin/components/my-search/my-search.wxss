@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container {
+  height: 50px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.container .search-box {
+  height: 36px;
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .implication {
+  margin-left: 5px;
+  font-size: 15px;
+}
+
