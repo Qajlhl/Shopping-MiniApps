@@ -1,0 +1,123 @@
+{
+	"pages": [
+		{
+		    "path" : "pages/house/house",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+
+        {
+            "path" : "pages/tabbar/tabbar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cate/cate",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cart/cart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+    ],
+    "subPackages": [
+    	{
+    		"root": "subpkg",
+			"pages": [{
+                    "path" : "goods-detail/goods-detail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "goods-list/goods-list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "search/search",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+    	}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "购物项目",
+		"navigationBarBackgroundColor": "#C00000",
+		"backgroundColor": "#FFFFFF",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+
+	"tabBar":{
+		"selectedColor": "#C00000",
+		"list":[
+			{
+				"pagePath":"pages/house/house",
+				"text":"首页",
+				"iconPath":"static/tab_icons/home.png",
+				"selectedIconPath":"static/tab_icons/home-active.png"
+			},
+			{
+				"pagePath":"pages/cate/cate",
+				"text":"分类",
+				"iconPath":"static/tab_icons/cate.png",
+				"selectedIconPath":"static/tab_icons/cate-active.png"
+			},
+			{
+				"pagePath":"pages/cart/cart",
+				"text":"购物车",
+				"selectedIconPath":"static/tab_icons/cart-active.png",
+				"iconPath":"static/tab_icons/cart.png"
+			},
+			{
+				"pagePath":"pages/my/my",
+				"text":"我的",
+				"selectedIconPath":"static/tab_icons/my-active.png",
+				"iconPath":"static/tab_icons/my.png"
+			}
+		]
+	}
+}
