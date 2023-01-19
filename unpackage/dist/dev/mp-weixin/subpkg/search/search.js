@@ -170,141 +170,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/Abby/Desktop/微信小程序/shopping/subpkg/search/search.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 40));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 42));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      value: '',
-      timer: null,
-      searchList: [],
-      // 搜索历史
-      history: []
-    };
-  },
-  onLoad: function onLoad() {
-    this.history = JSON.parse(uni.getStorageSync('history') || '[]');
-  },
-  methods: {
-    input: function input(value) {
-      var _this = this;
-      //防抖处理
-      if (this.timer) {
-        clearTimeout(this.timer);
-      }
-      this.timer = setTimeout(function () {
-        // 将输入框内输入的内容赋值给 value
-        _this.value = value;
-        // 开始根据输入的关键词给出建议列表
-        _this.getSearchList();
-        _this.saveHistroy();
-      }, 500);
-    },
-    saveHistroy: function saveHistroy() {
-      this.history.unshift(this.value);
-      var set = new Set(this.history);
-      this.history = Array.from(set);
-
-      // 持久化存储搜索历史记录  同步接口 (key，value)
-      uni.setStorageSync('history', JSON.stringify(this.history));
-    },
-    getSearchList: function getSearchList() {
-      var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var _yield$uni$$http$get, data;
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (!(_this2.value === '')) {
-                  _context.next = 3;
-                  break;
-                }
-                _this2.searchList = [];
-                return _context.abrupt("return");
-              case 3:
-                _context.next = 5;
-                return uni.$http.get('/api/public/v1/goods/qsearch', {
-                  query: _this2.value
-                });
-              case 5:
-                _yield$uni$$http$get = _context.sent;
-                data = _yield$uni$$http$get.data;
-                if (!(data.meta.status != 200)) {
-                  _context.next = 10;
-                  break;
-                }
-                uni.$showFail();
-                return _context.abrupt("return");
-              case 10:
-                _this2.searchList = data.message;
-              case 11:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    gotoDetail: function gotoDetail(id) {
-      uni.navigateTo({
-        url: '/subpkg/goods-detail/goods-detail?id=' + id
-      });
-    },
-    deleteAllHistory: function deleteAllHistory() {
-      // 删除所有的历史记录
-      this.history = [];
-      uni.removeStorageSync('history');
-    },
-    gotoGoodsList: function gotoGoodsList(value) {
-      uni.navigateTo({
-        url: '/subpkg/goods-list/goods-list?query=' + value
-      });
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\package.json'\n    at Object.openSync (node:fs:594:3)\n    at Object.readFileSync (node:fs:462:35)\n    at parsePackage (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\browserslist\\node.js:99:8)\n    at Function.loadConfig (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\browserslist\\node.js:232:24)\n    at getTargets (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\helper-compilation-targets\\lib\\index.js:191:30)\n    at resolveTargets (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\lib\\config\\resolve-targets.js:52:50)\n    at loadPrivatePartialConfig (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\lib\\config\\partial.js:88:49)\n    at loadPrivatePartialConfig.next (<anonymous>)\n    at C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\lib\\config\\partial.js:122:25\n    at Generator.next (<anonymous>)\n    at step (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\gensync\\index.js:261:32)\n    at C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\gensync\\index.js:273:13\n    at async.call.result.err.err (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\gensync\\index.js:223:11)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)");
 
 /***/ }),
 
@@ -329,11 +197,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/Abby/Desktop/微信小程序/shopping/subpkg/search/search.vue?vue&type=style&index=0&lang=scss& ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-// extracted by mini-css-extract-plugin
-    if(false) { var cssReload; }
-  
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):\nError: No PostCSS Config found in: C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\postcss.config.js\n    at C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\postcss-load-config\\src\\index.js:91:15\n    at C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at C:\\Users\\Abby\\AppData\\Local\\Temp\\Rar$EXa9720.20662\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\postcss-loader\\src\\index.js:208:9");
 
 /***/ })
 
