@@ -2,48 +2,28 @@
 	"pages": [
 		{
 		    "path" : "pages/house/house",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
-		    }
+		     "style": {}
 		    
 		},
 
         {
             "path" : "pages/tabbar/tabbar",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
+            "style": {}
             
         }
         ,{
             "path" : "pages/cate/cate",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
+            "style": {}
             
         }
         ,{
             "path" : "pages/cart/cart",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
+           "style": {}
             
         }
         ,{
             "path" : "pages/my/my",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
+            "style": {}
             
         }
 
@@ -51,45 +31,35 @@
     "subPackages": [
     	{
     		"root": "subpkg",
-			"pages": [{
+			"pages": [
+				{
                     "path" : "goods-detail/goods-detail",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
+                    "style" :{}
                 
                 }
                 ,{
                     "path" : "goods-list/goods-list",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
+                    
+                    "enablePullDownRefresh": true,
+					"onReachBottomDistance": 150
                 }
                 
                 }
                 ,{
                     "path" : "search/search",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
+                    "style" :{}
                 }
             ]
     	}
     ],
-	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "购物项目",
-		"navigationBarBackgroundColor": "#C00000",
-		"backgroundColor": "#FFFFFF",
-		"app-plus": {
-			"background": "#efeff4"
-		}
-	},
+	 "globalStyle": {
+	    "navigationBarTextStyle": "white",
+	    "navigationBarTitleText": "购物商城",
+	    "navigationBarBackgroundColor": "#C00000",
+	    "backgroundColor": "#FFFFFF"
+	  },
 
 	"tabBar":{
 		"selectedColor": "#C00000",

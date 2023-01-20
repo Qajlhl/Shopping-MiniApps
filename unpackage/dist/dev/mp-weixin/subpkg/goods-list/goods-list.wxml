@@ -1,1 +1,1 @@
-<view>我是商品列表</view>
+<view class="goods-list"><block wx:for="{{$root.l0}}" wx:for-item="item" wx:for-index="index"><view data-event-opts="{{[['tap',[['gotoDetail',['$0'],[[['goods','',index]]]]]]]}}" class="goods" bindtap="__e"><view class="left"><image src="{{item.$orig.goods_small_logo||defaultPic}}" mode="widthFix"></image></view><view class="right"><view class="description">{{''+item.$orig.goods_name+''}}</view><view class="item-price">{{'￥'+item.f0+''}}</view></view></view></block></view>

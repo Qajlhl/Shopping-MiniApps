@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.goods-list .goods {
+  display: flex;
+  padding: 10px 5px;
+}
+.goods-list .goods .left {
+  margin-right: 5px;
+}
+.goods-list .goods .left image {
+  width: 100px;
+  height: 100px;
+}
+.goods-list .goods .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.goods-list .goods .right .description {
+  font-size: 13px;
+}
+.goods-list .goods .right .item-price {
+  font-size: 16px;
+  color: #C00000;
+}
+
