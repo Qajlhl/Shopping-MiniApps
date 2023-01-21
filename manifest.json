@@ -50,11 +50,18 @@
     /* 快应用特有相关 */
     "mp-weixin" : {
         /* 小程序特有相关 */
-        "appid" : "",
+        "appid" : "wx25a8dbda50d9c7b8",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "postcss" : false
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "requiredPrivateInfos" : [ "getFuzzyLocation", "choosePoi", "chooseAddress" ],
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "你的位置信息将用来进行接口调试"
+            }
+        }
     },
     "vueVersion" : "2"
 }

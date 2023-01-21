@@ -46,6 +46,7 @@
 </template>
 
 <script>
+	import { mixin } from '../../mixin/mixin.js'
 	export default {
 		data() {
 			return {
@@ -110,7 +111,8 @@
 					url:'/subpkg/search/search'
 				})
 			}
-		}
+		},
+		mixins:[mixin]
 	}
 </script>
 

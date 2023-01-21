@@ -1,0 +1,1 @@
+<view class="sum-container"><label data-event-opts="{{[['tap',[['changeChecked',['$event']]]]]}}" class="radio" bindtap="__e"><radio color="#C00000" checked="{{checked}}"></radio><text>全选</text></label><view class="sum">合计:<text class="amount">{{"￥"+$root.f0}}</text></view><view class="confirm-sum">{{'结算('+checkedTotal+')'}}</view></view>

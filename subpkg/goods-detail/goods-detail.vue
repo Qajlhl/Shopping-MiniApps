@@ -45,6 +45,7 @@
 </template>
 
 <script>
+	import { mapState,mapMutations,mapGetters } from 'vuex';
 	export default {
 		data() {
 			return {
@@ -71,10 +72,35 @@
 				}]
 			};
 		},
+		watch:{
+			total:
+			{
+				handler(newVal)
+				{
+					//console.log(this.options);
+					const result = this.options.find((item)=>{
+						return item.text === "购物车";
+					})
+					
+					if(!(result === undefined))
+					{
+						result.info = newVal;
+					}
+				}
+				
+			}
+		},
+		computed:{
+			//调用 mapState 方法，把 m_cart 模块中的 cart 数组映射到当前页面中，作为计算属性来使用
+			//调用方法：...mapState('模块的名称', ['要映射的数据名称1', '要映射的数据名称2'])
+			...mapState('my_cart',['cart']),
+			...mapGetters('my_cart',['total'])
+		},
 		onLoad(options){
 			const id = options.id;
 			this.getGoodsInfo(id);
 		},
+
 		methods:{
 			preview(index){
 				//console.log(this.goods_info.pics.map( item => item.pics_big ));
@@ -94,6 +120,7 @@
 				this.goods_info = data.message;
 				this.goods_info.goods_introduce = this.goods_info.goods_introduce.replace(/<img /g,'<img style="display:block;" ').replace(/webp/g,'jpg')
 			},
+			...mapMutations('my_cart',['addToCart']),
 			leftclick(e){
 				//console.log(e);
 				if(e.content.text === "购物车")
@@ -104,7 +131,25 @@
 					})
 				}
 				
-			}
+			},
+			rightClick(e)
+			{
+				if(e.content.text === "加入购物车")
+				{
+					const goods = {
+						goods_name:this.goods_info.goods_name,
+						goods_id:this.goods_info.goods_id,
+						goods_count : 1,
+						goods_price:this.goods_info.goods_price,
+						goods_small_logo : this.goods_info.goods_small_logo,
+						goods_status:false //该商品的勾选状态
+					}
+					
+					this.addToCart(goods);
+				}
+			},
+			
+			
 		}
 	}
 </script>

@@ -76,6 +76,7 @@
 			modelValue(val) {
 				this.inputValue = +val;
 			}
+
 		},
 		created() {
 			if (this.value === 1) {
@@ -131,8 +132,8 @@
 			},
 			_onBlur(event) {
 				this.$emit('blur', event)
-				let value = event.detail.value;
-				if (isNaN(value)) {
+				let value = parseInt(event.detail.value);
+				if (Number.isNaN(value)) {
 					this.inputValue = this.min;
 					return;
 				}

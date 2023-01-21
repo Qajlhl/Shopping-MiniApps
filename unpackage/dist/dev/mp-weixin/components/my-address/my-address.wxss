@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.address-choice {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-show {
+  height: 90px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5px;
+}
+.address-show .first-line {
+  display: flex;
+  justify-content: space-between;
+}
+.address-show .first-line .right {
+  display: flex;
+}
+.address-show .first-line .right .phone {
+  margin-right: 5px;
+}
+.address-show .second-line {
+  margin-top: 10px;
+}
+.address-border {
+  width: 100%;
+  height: 5px;
+  display: block;
+}
+

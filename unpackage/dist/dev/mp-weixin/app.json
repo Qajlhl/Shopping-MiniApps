@@ -18,7 +18,7 @@
   ],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "购物项目",
+    "navigationBarTitleText": "购物商城",
     "navigationBarBackgroundColor": "#C00000",
     "backgroundColor": "#FFFFFF"
   },
@@ -50,6 +50,16 @@
         "iconPath": "static/tab_icons/my.png"
       }
     ]
+  },
+  "requiredPrivateInfos": [
+    "getFuzzyLocation",
+    "choosePoi",
+    "chooseAddress"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用来进行接口调试"
+    }
   },
   "usingComponents": {}
 }
